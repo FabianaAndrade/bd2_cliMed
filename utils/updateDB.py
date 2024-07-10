@@ -7,11 +7,9 @@ class UpdateDB:
     def execute_query_update(self, sql, values):
         try:
             with self.conn.cursor() as cur:
-                if values:
-                    cur.execute(sql, values) #
-                else:
-                    cur.execute(sql)
-                return cur.fetchall()
+                cur.execute(sql, values)
+                self.conn.commit()
+                return cur.statusmessage
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
             return None
@@ -21,5 +19,7 @@ class UpdateDB:
             UPDATE {table}
             SET {column} = %s
             WHERE {condition};
+
         """
         return self.execute_query_update(sql, (value,))
+        
