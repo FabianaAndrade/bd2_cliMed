@@ -35,6 +35,7 @@ class MenuCliMed:
     
     
     def show_menu_consult(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n----Menu de Consultas----")
         print('1: Consultar uma das tabelas\n2: QUERY PROPRIA\n3: Voltar\n')
 
@@ -50,7 +51,7 @@ class MenuCliMed:
                 print("Opção inválida")
     
     def show_menu_consult_table(self):
-        os.system('cls' if os.name == 'nt' else 'clear') #(TALVEZ SEJA BOM COLOCAR em todos)
+        os.system('cls' if os.name == 'nt' else 'clear')
 
         print("\n----Menu de Consultas de Tabelas---")
        
@@ -65,6 +66,7 @@ class MenuCliMed:
                 print("\nOpção inválida")
             
     def show_menu_consult_query(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n----Menu de Consultas de Query----")
       
         while True:
@@ -79,6 +81,7 @@ class MenuCliMed:
                 print("Opção inválida")
 
     def show_menu_update(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         '''Update de informações na base de dados'''
         print("\n----Menu de Atualizações----")
     
@@ -108,6 +111,7 @@ class MenuCliMed:
                 print("\nOpção inválida")
     
     def show_menu_insert(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         '''Funcao para insercao de dados na base'''
         print("\n----Menu de Inserções----")
         while True:
