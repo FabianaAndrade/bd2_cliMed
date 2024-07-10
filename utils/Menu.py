@@ -15,6 +15,7 @@ class MenuCliMed:
         self.show_menu()
     
     def show_menu(self):
+        os.system('cls' if os.name == 'nt' else 'clear')
         print("\n-------Bem vindo ao Sistema de Gerenciamento de Clínicas Médicas-----")
         print("\n----Menu de Opções----")
         while True:
